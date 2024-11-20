@@ -11,7 +11,7 @@ This is a Docker container implementation of [DenverCoder1&#39;s GitHub Readme S
 ## Demo
 
 <p align="center">
-  <video src=".github/demo.mp4" controls="controls" style="max-width: 50%;">
+  <video src=".github/Demo.mp4" controls="controls" style="max-width: 50%;">
   </video>
 </p>
 
