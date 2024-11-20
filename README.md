@@ -10,10 +10,7 @@ This is a Docker container implementation of [DenverCoder1&#39;s GitHub Readme S
 
 ## Demo
 
-<p align="center">
-  <video src=".github/Demo.mp4" controls="controls" style="max-width: 50%;">
-  </video>
-</p>
+https://github.com/qcoudeyr/Docker-github-readme-streak-stats/blob/8fed23b6acd0b6237f1460ecec5a26b062315b5a/.github/Demo.mp4
 
 ## Installation
 
