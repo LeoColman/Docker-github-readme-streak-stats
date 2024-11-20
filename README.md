@@ -8,9 +8,8 @@ A Docker container for the GitHub Readme Streak Stats project - Display your tot
 
 This is a Docker container implementation of [DenverCoder1&#39;s GitHub Readme Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats) project. It allows you to self-host the streak stats generator service using Docker, making it easy to deploy and maintain.
 
-> [!Note]  
+> [!Note]
 > You will still need an reverse proxy open to the public internet else it will work only locally.
-
 
 > [!TIP]
 > For this case, the [vercel installation](https://github.com/DenverCoder1/github-readme-streak-stats) is more suitable as it give you a public link to the service.
@@ -25,21 +24,14 @@ https://github.com/user-attachments/assets/d4a5bb71-d18e-4cbc-b038-6d8751cbe6e7
 
 - Docker
 - Docker Compose (optional, but recommended)
-- GitHub Personal Access Token (no scopes required)
+- [GitHub Personal Access Token](https://github.com/settings/tokens) (no scopes required)
 
 ### Quick setup
 
-1. Create a `.env` file
+1. Start the container using Docker:
 
-2. Add your GitHub token to the `.env` file:
-
-```env
-TOKEN=<your-github-token>
 ```
-
-3. Start the container using Docker:
-```
-docker run -d --network host --name streak-stats --restart unless-stopped -e APPPORT=9000 qcdev/github-readme-streak-stats
+docker run -d --network host --name streak-stats --restart unless-stopped -e TOKEN=<your-github-token> -e APPPORT=9000 qcdev/github-readme-streak-stats
 ```
 
 > [!TIP]
@@ -47,20 +39,13 @@ docker run -d --network host --name streak-stats --restart unless-stopped -e APP
 
 ### Using docker compose
 
-1. Clone this repository
-2. Create a `.env` file from the template:
+1. Export your Github Token:
 
 ```sh
-cp .env.template .env
+export TOKEN=<your-github-token>
 ```
 
-3. Add your GitHub token to the `.env` file:
-
-```env
-TOKEN=<your-github-token>
-```
-
-4. Start the container using Docker Compose:
+2. Start the container using Docker Compose:
 
 ```sh
 docker-compose up -d
@@ -82,11 +67,7 @@ The container can be configured using the following environment variables:
 
 - `APPPORT`: The port the service will listen on (default: 9000)
 
-You can modify these in the
-
-docker-compose.yml
-
- file or pass them directly to Docker.
+You can modify these in the docker-compose.yml file or pass them directly to Docker.
 
 ## Docker Details
 
