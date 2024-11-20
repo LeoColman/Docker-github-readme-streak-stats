@@ -1,9 +1,8 @@
 services:
   streak-stats:
-    build:
-      args:
-        APPPORT: 9000
-      dockerfile: Dockerfile
+    image: qcdev/github-readme-streak-stats:latest
+    environment:
+      - TOKEN=${TOKEN}
     network_mode: "host"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000"]
