@@ -8,6 +8,13 @@ A Docker container for the GitHub Readme Streak Stats project - Display your tot
 
 This is a Docker container implementation of [DenverCoder1&#39;s GitHub Readme Streak Stats](https://github.com/DenverCoder1/github-readme-streak-stats) project. It allows you to self-host the streak stats generator service using Docker, making it easy to deploy and maintain.
 
+> [!Note]  
+> You will still need an reverse proxy open to the public internet else it will work only locally.
+
+
+> [!TIP]
+> For this case, the [vercel installation](https://github.com/DenverCoder1/github-readme-streak-stats) is more suitable as it give you a public link to the service.
+
 ## Demo
 
 https://github.com/user-attachments/assets/d4a5bb71-d18e-4cbc-b038-6d8751cbe6e7
@@ -20,7 +27,25 @@ https://github.com/user-attachments/assets/d4a5bb71-d18e-4cbc-b038-6d8751cbe6e7
 - Docker Compose (optional, but recommended)
 - GitHub Personal Access Token (no scopes required)
 
-### Quick Setup
+### Quick setup
+
+1. Create a `.env` file
+
+2. Add your GitHub token to the `.env` file:
+
+```env
+TOKEN=<your-github-token>
+```
+
+3. Start the container using Docker:
+```
+docker run -d --network host --name streak-stats --restart unless-stopped -e APPPORT=9000 qcdev/github-readme-streak-stats
+```
+
+> [!TIP]
+> You can set the APPPORT for a more suitable Port on you system depending on your need.
+
+### Using docker compose
 
 1. Clone this repository
 2. Create a `.env` file from the template:
