@@ -49,7 +49,7 @@ RUN composer update
 COPY .env.template .env
 
 # Update port in composer.json
-RUN sed -i "s/localhost:8000/127.0.0.1:${APPPORT}/" composer.json
+RUN sed -i "s/localhost:8000/0.0.0.0:${APPPORT}/" composer.json
 
 # Expose port
 EXPOSE ${APPPORT}

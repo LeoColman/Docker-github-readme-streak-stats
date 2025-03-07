@@ -2,7 +2,8 @@
 
 A Docker container for the GitHub Readme Streak Stats project - Display your total GitHub contributions, current streak, and longest streak on your GitHub profile README.
 
-[![License](https://img.shields.io/github/license/DenverCoder1/github-readme-streak-stats?style=flat-square)](LICENSE) [![Docker](https://img.shields.io/badge/Docker_Hub-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/r/qcdev/github-readme-streak-stats) ![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=flat-square&logo=alpine-linux&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-8.2-%23777BB4.svg?style=flat-square&logo=php&logoColor=white)
+[![License](https://img.shields.io/github/license/DenverCoder1/github-readme-streak-stats?style=flat-square)](LICENSE) [![Docker](https://img.shields.io/badge/Docker_Hub-%230db7ed.svg?style=flat-square&logo=docker&logoColor=white)](https://hub.docker.com/r/leocolman/github-readme-streak-stats) ![Alpine Linux](https://img.shields.io/badge/Alpine_Linux-%230D597F.svg?style=flat-square&logo=alpine-linux&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-8.2-%23777BB4.svg?style=flat-square&logo=php&logoColor=white)
+
 
 ## Introduction
 
@@ -31,7 +32,7 @@ https://github.com/user-attachments/assets/d4a5bb71-d18e-4cbc-b038-6d8751cbe6e7
 1. Start the container using Docker:
 
 ```
-docker run -d --network host --name streak-stats --restart unless-stopped -e TOKEN=<your-github-token> -e APPPORT=9000 qcdev/github-readme-streak-stats
+docker run -d --network host --name streak-stats --restart unless-stopped -e TOKEN=<your-github-token> -e APPPORT=9000 leocolman/github-readme-streak-stats
 ```
 
 > [!TIP]

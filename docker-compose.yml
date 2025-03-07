@@ -1,6 +1,6 @@
 services:
   streak-stats:
-    image: qcdev/github-readme-streak-stats:latest
+    image: leocolman/github-readme-streak-stats:latest
     environment:
       - TOKEN=${TOKEN}
     network_mode: "host"
